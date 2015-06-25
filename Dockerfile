@@ -5,16 +5,8 @@
 #
 
 # Pull base image.
-# FROM dockerfile/java:oracle-java8
 
-FROM ubuntu
-
-# Install Java.
-RUN \
-  apt-get update && \
-  apt-get install -y openjdk-7-jre && \
-  rm -rf /var/lib/apt/lists/*
-
+FROM dockerfile/java:oracle-java8
 
 ENV ES_PKG_NAME elasticsearch-1.5.0
 
